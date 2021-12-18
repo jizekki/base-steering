@@ -1,12 +1,12 @@
 import pygame
 import random
 
-from point import Point
+from utils.point import Point
 
 
 class Track:
-    _color_back = (128, 128, 128)
-    _color_fore = (10, 10, 10)
+    _color_back = pygame.Color(128, 128, 128)
+    _color_fore = pygame.Color(10, 10, 10)
     _width = 20
     _screen = None
     _cachedLength = []
@@ -31,8 +31,8 @@ class Track:
 
     def segment_point_add_length(self, segment, point, length):
         """
-        Get the segment and point (on it) after adding length to the segment and point (on it),
-        by following the path
+        Get the segment and point (on it) after adding length to the
+        segment and point (on it), by following the path
         """
         circuit = self.properties["circuit"]
         next_step = point.distance_to(circuit[segment])
@@ -65,7 +65,9 @@ class Track:
         return best_segment, best_point, best_length
 
     def closest_point_to_segment(self, numSegment, point):
-        """Returns the closest point on the circuit segment from point"""
+        """
+        Returns the closest point on the circuit segment from point
+        """
         circuit = self.properties["circuit"]
         p0 = circuit[len(circuit) - 1 if numSegment - 1 < 0 else numSegment - 1]
         p1 = circuit[numSegment]

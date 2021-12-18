@@ -3,9 +3,9 @@ import pygame
 import pygame.draw
 import random
 
-from point import Point
-from scene import Scene
-from vehicle import Vehicle
+from utils.point import Point
+from elements.scene import Scene
+from elements.vehicle import Vehicle
 
 
 gameWidth = 640

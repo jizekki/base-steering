@@ -1,7 +1,7 @@
 import pygame
 import math
 
-from point import Point
+from utils.point import Point
 
 # Handles Vehicles types
 class VehicleType:
@@ -102,7 +102,6 @@ class Vehicle:
 
 
 class SetOfVehicles:
-
     def __init__(self, properties):
         self.vehicles = []
         self.marks = 0
@@ -116,7 +115,7 @@ class SetOfVehicles:
         for simple simulations
         """
         for i, v1 in enumerate(self.vehicles):
-            for v2 in self.vehicles[i + 1:]:
+            for v2 in self.vehicles[i + 1 :]:
                 offset = v2.coords - v1.coords
                 al = abs(offset)
                 if al != 0 and al < v1.radius + v2.radius - 1:  # collision

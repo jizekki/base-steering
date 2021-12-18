@@ -26,4 +26,6 @@ The game is not as easy as it seems. there are some rules to follow in order to 
 
 # Additional changes as to the initial version
 
-- In addition to all the previous functionalities. the code has been optimized by adding a class `Point` to store the coordinates and easily apply operations between multiple instances.
+In addition to all the previous functionalities :
+- the code has been optimized by adding a class `Point` to store the coordinates and easily apply operations between multiple instances.
+- The code has been cleaned to follow the `PEP8` style guide.

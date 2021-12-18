@@ -1,9 +1,9 @@
 import pygame
 import random
 
-from point import Point
-from track import Track
-from vehicle import Vehicle, SetOfVehicles
+from utils.point import Point
+from .track import Track
+from .vehicle import Vehicle, SetOfVehicles
 
 
 class Control:
@@ -36,7 +36,11 @@ class Control:
             2,
         )
         self.draw_text(
-            f"Points : {self.vehicles.marks} \t|\t Killed targets : {self.vehicles.killed_targets} \t|\t Weapons used : {self.vehicles.used_weapons}",
+            "Points : {} \t|\t Killed targets : {} \t|\t Weapons used : {}".format(
+                self.vehicles.marks,
+                self.vehicles.killed_targets,
+                self.vehicles.used_weapons,
+            ),
             (
                 20,
                 (
