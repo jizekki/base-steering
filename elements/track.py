@@ -64,20 +64,20 @@ class Track:
                 best_segment = i
         return best_segment, best_point, best_length
 
-    def closest_point_to_segment(self, numSegment, point):
+    def closest_point_to_segment(self, num_segment, point):
         """
         Returns the closest point on the circuit segment from point
         """
         circuit = self.properties["circuit"]
-        p0 = circuit[len(circuit) - 1 if numSegment - 1 < 0 else numSegment - 1]
-        p1 = circuit[numSegment]
+        p0 = circuit[len(circuit) - 1 if num_segment - 1 < 0 else num_segment - 1]
+        p1 = circuit[num_segment]
         local = point - p0
-        projection = local * self._cachedNormals[numSegment]
+        projection = local * self._cachedNormals[num_segment]
         if projection < 0:
             return p0
-        if projection > self._cachedLength[numSegment]:
+        if projection > self._cachedLength[num_segment]:
             return p1
-        return p0 + self._cachedNormals[numSegment] * projection
+        return p0 + self._cachedNormals[num_segment] * projection
 
     def draw_me(self):
         screen = self.properties["screen"]

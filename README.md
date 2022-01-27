@@ -18,11 +18,11 @@ To quit the game, the user can press the key **`Q`** or close the window or term
 
 # Rules
 
-The game is not as easy as it seems. there are some rules to follow in order to get the best scores.
+The game may not be as easy as it seems. there are some rules to follow in order to get the best scores.
 
-- If a weapon collides with a target. A reward of **10** marks is gained (yay!).
-- if a weapon collides with another weapon. A penalty of **-20** is deduced from the points (We don't want that to happen because it could lead to destroy our valuable track).
-- A weapon has an age, and dies when it reaches an age of **100**. If this happens, the weapon disappears. If the weapon dies without colliding with any target, a penalty of **-5** is deduced from the points (weapons are free, but they are to consume with moderation).
+- If a weapon collides with a target. A reward of **10** marks is gained.
+- if a weapon collides with another weapon. A penalty of **-20** is deducted from the points (we don't want to play with missiles).
+- A weapon has an age, and dies when it reaches an age of **100**. If this happens, the weapon disappears and a penalty of **-5** is deducted from the points.
 
 # Additional changes as to the initial version
 

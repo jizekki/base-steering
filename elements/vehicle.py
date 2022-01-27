@@ -3,6 +3,7 @@ import math
 
 from utils.point import Point
 
+
 # Handles Vehicles types
 class VehicleType:
     TRIANGLE = 0
